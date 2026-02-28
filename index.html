@@ -1,0 +1,128 @@
+
+<DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>SmartDesk Pro</title>
+        <link rel="stylesheet" href="styles.css">
+        <link href="https://fonts.googleapis.com/css?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    </head>
+
+    <script>
+    function revealOnScroll() {
+        const reveals = document.querySelectorAll(".reveal");
+
+        reveals.forEach(section => {
+            const windowHeight = window.innerHeight;
+            const revealTop = section.getBoundingClientRect().top;
+
+            if (revealTop < windowHeight - 100) {
+                section.classList.add("active");
+            }
+        });
+    }
+
+    window.addEventListener("scroll", revealOnScroll);
+    </script>
+
+    <body>
+
+        <!-- Navigation Bar -->
+         <header class="navbar">
+             <div class="logo">SmartDesk</div>
+ 
+             <nav>
+                 <a href="#">Home</a>
+                  <a href="#features">Features</a>
+                  <a href="#">Reviews</a>
+                  <a href="#" id="order-now" class="nav-btn">Order Now</a>
+             </nav>
+          </header>
+
+
+     <!-- Hero Section -->   
+        <section class="hero">
+            <div class="hero-container">
+                <h1>SmartDesk Pro</h1>
+                <p>The Ultimate Smart Desk for Your Modern Workspace</p>
+
+                <div class="hero-buttons">
+                    <a href="#purchase" class="btn-primary">Order Now</a>
+                    <a href="#features" class="btn-secondary">Learn More</a>
+                </div>
+            </div>
+        </section>
+
+
+    <!-- Features Section --> 
+        <section id="features" class="features reveal">
+    <h2>Amazing Features</h2>
+
+    <div class="features-grid">
+        <div class="feature-card">
+            <div class="icon"><img src="charging.png" alt="Wireless Charging"></div>
+            <h3>Wireless Charging</h3>
+            <p>Built-in Qi wireless charging pad for your devices.</p>
+        </div>
+
+        <div class="feature-card">
+            <div class="icon"><img src="height.png" alt="Height Adjustable"></div>
+            <h3>Height Adjustable</h3>
+            <p>Switch between sitting and standing with ease.</p>
+        </div>
+
+        <div class="feature-card">
+            <div class="icon"><img src="led.png" alt="Ambient LED Lighting"></div>
+            <h3>Ambient LED Lighting</h3>
+            <p>Customizable RGB lights for a modern vibe.</p>
+        </div>
+
+        <div class="feature-card">
+            <div class="icon"><img src="eco.png" alt="Eco-Friendly Design"></div>
+            <h3>Eco-Friendly Design</h3>
+            <p>Premium sustainable materials with sleek finish.</p>
+        </div>
+    </div>
+</section>
+
+<!--testimonials section -->
+<section class="testimonials reveal">
+    <h2>What Our Customers Say</h2>
+
+    <div class="testimonials-grid">
+        <div class="testimonial-card">
+            <p>"SmartDesk Pro completely transformed my workspace. I feel more productive every day."</p>
+            <h4>- John Miller</h4>
+        </div>
+
+        <div class="testimonial-card">
+            <p>"The adjustable height and LED lights make this the best desk I've ever owned."</p>
+            <h4>- Sarah Williams</h4>
+        </div>
+
+        <div class="testimonial-card">
+            <p>"Clean design, powerful features, and premium quality. Highly recommended."</p>
+            <h4>- David Lee</h4>
+        </div>
+    </div>
+</section>
+
+
+<section class="final-cta reveal">
+    <h2>Ready to Upgrade Your Workspace?</h2>
+    <p>Experience productivity like never before with SmartDesk Pro.</p>
+    <a href="#" class="btn-primary">Order Now</a>
+</section>
+
+<footer class="footer">
+    <div class="footer-content">
+        <h3>SmartDesk Pro</h3>
+        <p>Elevate your workspace. Enhance your productivity.</p>
+        <p class="copyright">© 2026 Muzammil Rajpoot. All rights reserved.</p>
+    </div>
+</footer>
+        
+
+    </body>    
+</html>
