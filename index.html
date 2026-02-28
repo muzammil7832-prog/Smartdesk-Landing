@@ -31,18 +31,24 @@
         <!-- Navigation Bar -->
          <header class="navbar">
              <div class="logo">SmartDesk</div>
+
+             <button class="nav-toggle" aria-label="Toggle Menu">
+                 <span class="bar"></span>
+                  <span class="bar"></span>
+                   <span class="bar"></span>
+             </button>
  
-             <nav>
-                 <a href="#">Home</a>
-                  <a href="#features">Features</a>
-                  <a href="#">Reviews</a>
-                  <a href="#" id="order-now" class="nav-btn">Order Now</a>
+             <nav class="nav-links">
+                 <a href="#hero">Home</a>
+                 <a href="#features">Features</a>
+                 <a href="#testimonials">Reviews</a>
+                 <a href="#purchase" id="order-now" class="nav-btn">Order Now</a>
              </nav>
           </header>
 
 
      <!-- Hero Section -->   
-        <section class="hero">
+        <section id="hero" class="hero">
             <div class="hero-container">
                 <h1>SmartDesk Pro</h1>
                 <p>The Ultimate Smart Desk for Your Modern Workspace</p>
@@ -87,7 +93,7 @@
 </section>
 
 <!--testimonials section -->
-<section class="testimonials reveal">
+<section id="testimonials" class="testimonials reveal">
     <h2>What Our Customers Say</h2>
 
     <div class="testimonials-grid">
@@ -109,7 +115,7 @@
 </section>
 
 
-<section class="final-cta reveal">
+<section id="purchase" class="final-cta reveal">
     <h2>Ready to Upgrade Your Workspace?</h2>
     <p>Experience productivity like never before with SmartDesk Pro.</p>
     <a href="#" class="btn-primary">Order Now</a>
@@ -119,10 +125,21 @@
     <div class="footer-content">
         <h3>SmartDesk Pro</h3>
         <p>Elevate your workspace. Enhance your productivity.</p>
-        <p class="copyright">© 2026 Muzammil Rajpoot. All rights reserved.</p>
+       <p class="copyright">© 2026 Muzammil Rajpoot. All rights reserved.</p>
     </div>
 </footer>
         
+    <script>
+document.addEventListener("DOMContentLoaded", () => {
+    const navToggle = document.querySelector(".nav-toggle");
+    const navLinks = document.querySelector(".nav-links");
+
+    navToggle.addEventListener("click", () => {
+        navLinks.classList.toggle("active");
+    });
+});
+</script>
+
 
     </body>    
 </html>
